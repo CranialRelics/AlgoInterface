@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+
+  redis_ts:  # Provides redis modules including time-series and graphs
+      image: redis/redis-stack-server
+      container_name: redis-tsdb
+      hostname: redis-tsdb
+      ports:
+        - '6379:6379'
+      volumes:
+        - ./redis_data/:/data
